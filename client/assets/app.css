@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+img{
+  max-width: 100%;
+}
+
+.App-loading {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.App-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh; }
+
+.App-content {
+  margin-left: 250px; }
+  @media (max-width: 48.0625em) {
+    .App-content {
+      margin-left: 0; } }
+
+.App-sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #dfe3e8;
+  -webkit-box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; }
+  @media (max-width: 48.0625em) {
+    .App-sidebar {
+      width: 100%;
+      border-bottom: 1px solid #dfe3e8;
+      position: relative;
+      height: auto; } }
+  .App-sidebar.open .App-sidebarContent {
+    max-height: 100vh !important;
+    opacity: 1; }
+
+.App-sidebarContent {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease; }
+  @media (max-width: 48.0625em) {
+    .App-sidebarContent {
+      max-height: 0vh;
+      overflow: hidden;
+      opacity: 0;
+      border-top: 1px solid #dfe3e8; } }
+
+.App-sidebarMenuIcon {
+  display: none; }
+  @media (max-width: 48.0625em) {
+    .App-sidebarMenuIcon {
+      display: block; } }
+
+.App-sidebarLogo {
+  padding: 1.6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.App-sidebarLinks {
+  padding: 1.6rem;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.App-sidebarLink {
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none; }
+  .App-sidebarLink:hover {
+    background-image: linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .App-sidebarLink:focused {
+    box-shadow: inset 0.2rem 0 0 #5c6ac4;
+    background-image: linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .App-sidebarLink:active {
+    background-image: linear-gradient(rgba(179, 188, 245, 0.1), rgba(179, 188, 245, 0.1)); }
+  .App-sidebarLink.active {
+    background: #f4f6f8;
+    border: 1px solid #dfe3e8; }
+    .App-sidebarLink.active .Polaris-Icon {
+      fill: #5c6ac4; }
+    .App-sidebarLink.active .App-sidebarLinkText {
+      color: #212b36;
+      font-weight: bold; }
+
+.App-sidebarLinkIcon {
+  padding: 0.4rem;
+  padding-right: 0.8rem; }
+
+.App-sidebarLinkText {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-decoration: none;
+  padding-left: 0.8rem;
+  color: #637381;
+  font-weight: 400; }
+
+.App-sidebarBottomLinks {
+  padding: 0.8rem; }
+
+.App-sidebarProfile {
+  border-top: 1px solid #dfe3e8;
+  padding: 1.6rem;
+  cursor: pointer;
+  outline: none;
+  height: 70px; }
+  .App-sidebarProfile:hover {
+    background-image: linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .App-sidebarProfile:focused {
+    box-shadow: inset 0.2rem 0 0 #5c6ac4;
+    background-image: linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+  .App-sidebarProfile:active {
+    background-image: linear-gradient(rgba(179, 188, 245, 0.1), rgba(179, 188, 245, 0.1)); }
+
+.App-sidebarLogo img {
+  width: 200px;
+  padding-top: 1.6rem; }
+  @media (max-width: 48.0625em) {
+    .App-sidebarLogo img {
+      padding-top: 0;
+      width: 120px;
+      position: relative;
+      top: 2px; } }
+
+.App-sidebarPopover {
+  margin-left: 1.6rem;
+  margin-right: 1.6rem; }
+
+.App-content {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.App-contentMain {
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
+
+.Footer {
+  height: 50px;
+  padding: 2rem; }
+
+@media only screen and (max-width: 769px) {
+  .App-container {
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+.SaveBanner {
+  margin-bottom: 2rem; }
+
+.Countdown {
+  position: relative;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  text-align: center; }
+
+.Countdown svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotateY(-180deg) rotateZ(-90deg);
+  transform: rotateY(-180deg) rotateZ(-90deg); }
+
+.Countdown svg circle {
+  stroke-dasharray: 60px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: white;
+  fill: none;
+  -webkit-animation: countdown 3s linear forwards;
+  animation: countdown 3s linear forwards; }
+
+.Countdown.success svg circle {
+  stroke: #50b83c; }
+
+@-webkit-keyframes countdown {
+  from {
+    stroke-dashoffset: 0px; }
+  to {
+    stroke-dashoffset: 60px; } }
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px; }
+  to {
+    stroke-dashoffset: 60px; } }
+
+.ProgressBar.warning .Polaris-ProgressBar .Polaris-ProgressBar__Indicator {
+  background-color: #f49342 !important; }
+
+.ProgressBar.danger .Polaris-ProgressBar .Polaris-ProgressBar__Indicator {
+  background-color: #de3618 !important; }
+
+.Upload-fileuploaded {
+  height: 100%; }
+
+.Spinner-container {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex; }
+
+.Products-grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2rem 2rem;
+  grid-template-areas: ". . ."; }
+  @media (max-width: 48.0625em) {
+    .Products-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: ". ."; } }
+
+.Products-filter {
+  margin-bottom: 3.2rem; }
+
+.Product-item {
+  height: 100%; }
+  .Product-item > div {
+    height: 100%; }
+  .Product-item:hover {
+    cursor: pointer; }
+    .Product-item:hover .Polaris-Card {
+      background-image: linear-gradient(rgba(223, 227, 232, 0.3), rgba(223, 227, 232, 0.3)); }
+
+.Product-itemImageContainer {
+  background: white; }
+
+.Product-itemImage {
+  max-height: 250px;
+  max-width: 300px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 0 1px 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  box-shadow: 0 0 0 1px 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  text-align: center;
+  display: block; }
+
+.Product-itemPrice {
+  color: #5c6ac4;
+  font-size: 1.3em;
+  margin-bottom: 0.4rem; }
+
+.Product-itemName {
+  margin-bottom: 0.8rem; }
+
+.Product-badges {
+  margin-top: 0.8rem; }
+
+  .rc-color-picker-trigger{
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .success__alert {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 25px;
+    background: #000;
+    color: #fff;
+    z-index: 9999;
+    border-radius: 3px;
+    font-size: 18px;
+}
+.product__wishlist-type{
+  padding-top: 80px
+}
